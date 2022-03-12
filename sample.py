@@ -1,19 +1,24 @@
 """
-Helper functions live here
-"""
-def increment_by_two(var_to_increment):
+
+import unittest
+from sample import increment_by_two
+from sample import increment_by_two, increment_by_three
+
+class TestSampleMethods(unittest.TestCase):
     """
-    This function increments input by two
-    :param var_to_increment: param to increment
-    :return: incremented variable
-    """
-    return var_to_increment + 2
+@@ -17,6 +17,15 @@ def test_increment_by_two(self):
+        self.assertEqual(increment_by_two(-2), 0)
+        self.assertEqual(increment_by_two(0), 2)
+        self.assertEqual(increment_by_two(3), 5)
+
+    def test_increment_by_three(self):
+        """
+        Test increments
+        """
+        self.assertEqual(increment_by_three(-2), 1)
+        self.assertEqual(increment_by_three(0), 3)
+        self.assertEqual(increment_by_three(3), 6)
 
 
-def increment_by_three(var_to_increment):
-    """
-    This function increments input by three
-    :param var_to_increment: param to increment
-    :return: incremented variable
-    """
-    return var_to_increment + 3
+if __name__ == '__main__':
+    unittest.main()
