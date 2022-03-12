@@ -7,7 +7,7 @@ from sample import increment_by_two, increment_by_three
 
 class TestSampleMethods(unittest.TestCase):
     """
-    Test harness
+    Test harness e
     """
 
     def test_increment_by_two(self):
