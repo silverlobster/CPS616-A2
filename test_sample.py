@@ -3,12 +3,17 @@ Test helper functions
 """
 
 import unittest
-from sample import increment_by_two
 from sample import increment_by_two, increment_by_three
 
 class TestSampleMethods(unittest.TestCase):
     """
-@@ -17,6 +17,15 @@ def test_increment_by_two(self):
+    Test harness
+    """
+
+    def test_increment_by_two(self):
+        """
+        Test increments
+        """
         self.assertEqual(increment_by_two(-2), 0)
         self.assertEqual(increment_by_two(0), 2)
         self.assertEqual(increment_by_two(3), 5)
